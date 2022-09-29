@@ -52,3 +52,9 @@ a {
     text-decoration: none;
     font: inherit;
 }
+button{
+    transition: opacity .3s;
+    &:hover{
+        opacity: 0.8;
+    }
+}
