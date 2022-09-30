@@ -1,7 +1,11 @@
 @import "reset";
+@import "slider";
 
 html {
   height: 100%;
+}
+section{
+  overflow: hidden;
 }
 
 body {
@@ -79,64 +83,36 @@ main {
     transform: scale(1.2);
   }
 }
-
-
-.swiper-support {
-  box-sizing: border-box;
-  width: 100%;
-  overflow: hidden;
-}
-.slider-contain{
-  position: relative;
-  max-width: 96%;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.swiper-button-next-support,
-.swiper-button-prev-support {
-  position: absolute;
-  top: 20%;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.swiper-button-prev-support {
-  left: -43px;
-
-}
-
-.swiper-button-next-support {
-  right: -48px;
-}
-.support__image{
+.support__image {
   margin-bottom: 10px;
 }
-.view-amount{
+.view-amount {
   color: #989898;
   font-weight: 400;
 }
-.support__name{
+.support__name {
   font-size: 15px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  color: #212121;
 }
-.form{
+.form {
   padding: 40px 30px;
   background-color: #ececec;
   border-radius: 20px;
   margin-bottom: 50px;
+  box-shadow: 0px 0px 20px #f3892f;
 }
-.form__inner{
+.form__inner {
   display: flex;
   justify-content: space-between;
 }
-.form__items{
+.form__items {
   width: 45%;
 }
-.form label{
+.form label {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
@@ -144,7 +120,7 @@ main {
 }
 .form input,
 .form select,
-.form textarea{
+.form textarea {
   border: transparent;
   outline: none;
   background-color: #ffffff;
@@ -152,42 +128,42 @@ main {
   margin-top: 10px;
   border-radius: 10px;
 }
-.form select{
+.form select {
   color: #f3892f;
   text-decoration: underline;
   cursor: pointer;
 }
-.form__textarea{
+.form__textarea {
   max-height: 170px;
   resize: none;
 }
-.form__sum{
+.form__sum {
   max-width: 250px;
 }
-.sum_container{
+.sum_container {
   display: flex;
   align-items: baseline;
-  & span{
+  & span {
     width: 30%;
     text-align: center;
   }
 }
 .label__mail,
-.label__name{
+.label__name {
   position: relative;
-  &::before{
-    content: '*';
+  &::before {
+    content: "*";
     color: #f3892f;
     position: absolute;
     top: 0;
     left: -7px;
   }
 }
-.form__item{
+.form__item {
   display: flex;
   align-items: center;
 }
-.form__submit{
+.form__submit {
   margin-right: 50px;
   padding: 15px 55px;
   background-color: #f3892f;
@@ -198,19 +174,19 @@ main {
   cursor: pointer;
   border: transparent;
 }
-.form__conditions{
+.form__conditions {
   max-width: 450px;
   font-size: 14px;
   color: #989898;
 }
-.support__check{
+.support__check {
   padding: 25px 55px;
   border: 2px solid #f3892f;
   border-radius: 20px;
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  & button{
+  & button {
     padding: 20px 25px;
     background-color: #ececec;
     border-radius: 10px;
@@ -219,13 +195,54 @@ main {
     cursor: pointer;
   }
 }
-.support__box{
-  & p{
+.support__box {
+  & p {
     font-weight: 700;
     font-size: 30px;
   }
-  & span{
+  & span {
     display: block;
     font-size: 18px;
   }
+}
+.last {
+  padding: 50px 0 90px;
+  background-image: url(../img/last-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  &__title {
+    color: #ffffff;
+  }
+  &__link {
+    color: #f3892f;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-skip-ink:  none;
+  }
+  &__image {
+    & img {
+      width: 100%;
+    }
+  }
+}
+.deleted {
+  padding-top: 50px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   &__title {
+    font-size: 35px;
+      & span {
+        color: #f3892f;
+      }
+    }
 }

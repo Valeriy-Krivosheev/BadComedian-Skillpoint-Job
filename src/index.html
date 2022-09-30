@@ -1,145 +1,248 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/head.html',{
-  "title":""
-  })
+@@include('html/head.html',{
+"title":""
+})
 
-  <body>
-    @@include('html/header.html')
+<body>
+  @@include('html/header.html')
 
-    <main>
-      <section class="support">
-        <div class="container">
-          <div class="box-title">
-            <h1 class="support__title title">
-              Поддержать обзоры
-            </h1>
-            <div class="support_social">
-              <a href="#" class="support__link">
-                <img src="@img/youtube-icon.png" alt="">
-              </a>
-              <a href="#" class="support__link">
-                <img src="@img/telegram-icon.png" alt="">
-              </a>
-              <a href="#" class="support__link">
-                <img src="@img/vk-icon.png" alt="">
-              </a>
+  <main>
+    <section class="support">
+      <div class="container">
+        <div class="box-title">
+          <h1 class="support__title title">
+            Поддержать обзоры
+          </h1>
+          <div class="support_social">
+            <a href="#" class="support__link">
+              <img src="@img/youtube-icon.png" alt="">
+            </a>
+            <a href="#" class="support__link">
+              <img src="@img/telegram-icon.png" alt="">
+            </a>
+            <a href="#" class="support__link">
+              <img src="@img/vk-icon.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="slider-contain">
+          <div class="swiper-support">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="support__image">
+                  <img src="@img/slider-support1.png" alt="">
+                </div>
+                <h4 class="support__name">
+                  ЗОЯ (Спасение рядового ИИСУСА)
+                </h4>
+                <span class="view-amount">
+                  15 млн просмотров
+                </span>
+              </div>
+              <div class="swiper-slide">
+                <div class="support__image">
+                  <img src="@img/slider-support2.png" alt="">
+                </div>
+                <h4 class="support__name">
+                  Непосредственно Каха (НОВЫЙ ШУРИК)
+                </h4>
+                <span class="view-amount">
+                  17 млн просмотров
+                </span>
+              </div>
+              <div class="swiper-slide">
+                <div class="support__image">
+                  <img src="@img/slider-support3.png" alt="">
+                </div>
+                <h4 class="support__name">
+                  Движение Вверх (Плагиат или великая правда..
+                </h4>
+                <span class="view-amount">
+                  27 млн просмотров
+                </span>
+              </div>
+            </div>
+
+
+            <div class="swiper-button-prev-support">
+              <img src="@img/prev-but-support.png" alt="">
+            </div>
+            <div class="swiper-button-next-support">
+              <img src="@img/next-but-support.png" alt="">
+            </div>
+
+          </div>
+        </div>
+
+        <form class="form" action="">
+          <div class="form__inner">
+            <div class="form__items">
+              <label class="label__select" for="select">
+                За обзор
+                <select class="form__select" name="" id="select">
+                  <option value="">ЗОЯ (Спасение рядового ИИСУСА)</option>
+                  <option value="">Непосредственно Каха (НОВЫЙ ШУРИК)</option>
+                  <option value="">Движение Вверх (Плагиат или великая
+                    правда..</option>
+                </select>
+              </label>
+              <label class="label__name" for="name">
+                Имя
+                <input class="form__name" type="text" id="name" required>
+              </label>
+              <label class="label__mail" for="mail">
+                E-mail
+                <input class="form__mail" type="email" id="mail" required>
+              </label>
+            </div>
+            <div class="form__items">
+              <label class="label__sum" for="sum">
+                Сумма
+                <div class="sum_container">
+                  <input class="form__sum" type="text" id="sum">
+                  <span> От 100руб.</span>
+                </div>
+
+              </label>
+              <label class="label-textarea" for="textarea">
+                Сообщение
+                <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="10"></textarea>
+              </label>
             </div>
           </div>
+          <div class="form__item">
+            <button class="form__submit" type="submit">отправить</button>
+            <p class="form__conditions">
+              Нажимая кнопку «Отправить» Вы принимаете Условия предоставления
+              услуг, а так же даете согласие на обработку персональных данных
+              в соответствии с политикой конфиденциальности.
+            </p>
+          </div>
+        </form>
+
+        <div class="support__check">
+          <div class="support__box">
+            <p>Уже донатили, а письма нет?</p>
+            <span>
+              Воспользуйтесь этой формой, что бы проверить статус платежа.
+            </span>
+          </div>
+          <button>Проверить статус</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="last">
+      <div class="container">
+        <div class="last__box">
+          <h3 class="last__title title">Последние ролики</h3>
+          <a href="https://www.youtube.com/c/TheBadComedian/videos" class="last__link" target="_blank">Смотреть всё</a>
+        </div>
+      </div>
+      <div class="swiper-last">
+        <div class="swiper-wrapper slider-wrapper-last">
+          <div class="swiper-slide">
+          <iframe class="iframe"  src="https://www.youtube.com/embed/6U9HYTyTlVw" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+           <div class="swiper-slide">
+          <iframe class="iframe" src="https://www.youtube.com/embed/NV_d0kmwNL8" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe class="iframe" src="https://www.youtube.com/embed/ujOVmKIrHqQ" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="swiper-slide">
+          <iframe class="iframe" src="https://www.youtube.com/embed/nIkH6C3_CX8" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          </div>
+
+        </div>
+        <div class="swiper-button-prev-last">
+          <img src="@img/last-arrow-prev.png" alt="">
+        </div>
+        <div class="swiper-button-next-last">
+          <img src="@img/last-arrow-next.png" alt="">
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="deleted">
+      <div class="container">
+        <div class="deleted__box">
+          <h3 class="deleted__title title">
+            <span>[BadNotDead]</span>
+            Удаленные обзоры
+          </h3>
+          <a href="https://www.youtube.com/c/BadNotDead/videos" class="last__link" target="_blank">Смотреть всё</a>
+        </div>
+        <h5 class="deleted__about">
+          Удалённые и заблокированные [BadComedian] обзоры.
+        </h5>
           <div class="slider-contain">
-            <div class="swiper-support">
+            <div class="swiper-deleted">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <a href="https://www.youtube.com/watch?v=982X8W49r_8" class="swiper-slide" target="_blank">
                   <div class="support__image">
-                    <img src="@img/slider-support1.png" alt="">
+                    <img src="@img/slider-deleted1.png" alt="">
                   </div>
                   <h4 class="support__name">
-                    ЗОЯ (Спасение рядового ИИСУСА)
+                    Невский Дрифт [Форсаж да Винчи]
                   </h4>
                   <span class="view-amount">
-                    15 млн просмотров
+                  7.3 млн просмотров
                   </span>
-                </div>
-                <div class="swiper-slide">
+                </a>
+                <a href="https://www.youtube.com/watch?v=cEq_qmrpNu4" class="swiper-slide" target="_blank">
                   <div class="support__image">
-                    <img src="@img/slider-support2.png" alt="">
+                    <img src="@img/slider-deleted2.png" alt="">
                   </div>
                   <h4 class="support__name">
-                    Непосредственно Каха (НОВЫЙ ШУРИК)
+                    ЧЕРНАЯ РОЗА (REDUX Обзор 2016)
                   </h4>
                   <span class="view-amount">
-                    17 млн просмотров
+                  17 млн просмотров
                   </span>
-                </div>
-                <div class="swiper-slide">
+                </a>
+                <a href="https://www.youtube.com/watch?v=1YUGuehdb38" class="swiper-slide" target="_blank">
                   <div class="support__image">
-                    <img src="@img/slider-support3.png" alt="">
+                    <img src="@img/slider-deleted3.png" alt="">
                   </div>
                   <h4 class="support__name">
-                    Движение Вверх (Плагиат или великая правда..
+                    КРЭЙК (Министерство культуры РФ про ИГР...
                   </h4>
                   <span class="view-amount">
                     27 млн просмотров
                   </span>
-                </div>
+                </a>
               </div>
-
-
-              <div class="swiper-button-prev-support">
+          
+          
+              <div class="swiper-button-prev-deleted">
                 <img src="@img/prev-but-support.png" alt="">
               </div>
-              <div class="swiper-button-next-support">
+              <div class="swiper-button-next-deleted">
                 <img src="@img/next-but-support.png" alt="">
               </div>
-
             </div>
           </div>
+      </div>
+    </section>
+  </main>
 
-          <form class="form" action="">
-            <div class="form__inner">
-              <div class="form__items">
-                <label class="label__select" for="select">
-                  За обзор
-                  <select class="form__select" name="" id="select">
-                    <option value="">ЗОЯ (Спасение рядового ИИСУСА)</option>
-                    <option value="">Непосредственно Каха (НОВЫЙ ШУРИК)</option>
-                    <option value="">Движение Вверх (Плагиат или великая
-                      правда..</option>
-                  </select>
-                </label>
-                <label class="label__name" for="name">
-                  Имя
-                  <input class="form__name" type="text" id="name" required>
-                </label>
-                <label class="label__mail" for="mail">
-                  E-mail
-                  <input class="form__mail" type="email" id="mail" required>
-                </label>
-              </div>
-              <div class="form__items">
-                <label class="label__sum" for="sum">
-                  Сумма
-                  <div class="sum_container">
-                    <input class="form__sum" type="text" id="sum">
-                    <span> От 100руб.</span>
-                  </div>
-
-                </label>
-                <label class="label-textarea" for="textarea">
-                  Сообщение
-                  <textarea class="form__textarea" name="textarea" id="textarea"
-                    cols="30" rows="10"></textarea>
-                </label>
-              </div>
-            </div>
-            <div class="form__item">
-              <button class="form__submit" type="submit">отправить</button>
-              <p class="form__conditions">
-                Нажимая кнопку «Отправить» Вы принимаете Условия предоставления
-                услуг, а так же даете согласие на обработку персональных данных
-                в соответствии с политикой конфиденциальности.
-              </p>
-            </div>
-          </form>
-
-          <div class="support__check">
-            <div class="support__box">
-              <p>Уже донатили, а письма нет?</p>
-              <span>
-                Воспользуйтесь этой формой, что бы проверить статус платежа.
-              </span>
-            </div>
-            <button>Проверить статус</button>
-          </div>
-
-        </div>
-      </section>
-    </main>
-
-    @@include('html/footer.html')
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+  @@include('html/footer.html')
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 
 </html>
