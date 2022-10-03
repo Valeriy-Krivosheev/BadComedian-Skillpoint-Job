@@ -4,7 +4,7 @@
 html {
   height: 100%;
 }
-section{
+section {
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@ main {
 }
 
 .title {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   color: #212121;
 
@@ -224,7 +224,7 @@ main {
     color: #f3892f;
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-skip-ink:  none;
+    text-decoration-skip-ink: none;
   }
   &__image {
     & img {
@@ -234,15 +234,117 @@ main {
 }
 .deleted {
   padding-top: 50px;
+  background-image: url(../img/deleted-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
   }
-   &__title {
-    font-size: 35px;
-      & span {
-        color: #f3892f;
-      }
+  &__title {
+    & span {
+      color: #f3892f;
     }
+  }
+  &__about {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+.badtrip {
+  padding-top: 60px;
+  background-image: url(../img/badtrip-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__inner {
+    padding: 30px;
+    background-image: url(../img/badtripinner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    padding-bottom: 45px;
+    margin-bottom: 50px;
+  }
+  &__item {
+    max-width: 48%;
+  }
+  &__title {
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  &__name {
+    font-size: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 0 10px;
+    &--slide {
+      color: #ffffff;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  &-amount {
+    padding: 0 10px;
+  }
+  &__link {
+    box-shadow: 0px 0px 20px #511e85;
+  }
+}
+.popular {
+  padding: 50px 0;
+  &__inner {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+}
+.footer {
+  background-image: url(../img/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  &__text {
+    color: #989898;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  &__link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+    &:not(:last-child){
+      margin-right: 15px;
+    }
+  }
 }

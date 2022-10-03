@@ -1,13 +1,15 @@
 .slider-contain {
   position: relative;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .swiper-button-next-support,
 .swiper-button-prev-support,
 .swiper-button-next-deleted,
-.swiper-button-prev-deleted {
+.swiper-button-prev-deleted,
+.swiper-button-prev-badtrip,
+.swiper-button-next-badtrip{
   position: absolute;
   top: 20%;
   z-index: 10;
@@ -18,13 +20,19 @@
 .swiper-button-prev-deleted {
   left: -43px;
 }
-
+.swiper-button-prev-badtrip {
+  left: -20px;
+}
 .swiper-button-next-support,
-.swiper-button-next-deleted  {
+.swiper-button-next-deleted {
   right: -48px;
 }
+.swiper-button-next-badtrip  {
+  right: -24px;
+}
 .swiper-support,
-.swiper-deleted {
+.swiper-deleted,
+.swiper-badtrip {
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
@@ -74,16 +82,19 @@
 .swiper-button-prev-last{
   left: 0;
 }
-.deleted{
-  background-image: url(../img/deleted-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  &__box{
-    margin-bottom: 20px;
-  }
-  &__about{
-    font-weight: 400;
-    font-size: 20px;
-    margin-bottom: 50px;
+.swiper-badtrip{
+  padding: 20px;
+}
+.swiper-badtrip .swiper-wrapper .swiper-slide-active .support__image{
+    position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  box-shadow: 0px 0px 23px #276ca1;
+  border-radius: 20px;
   }
 }

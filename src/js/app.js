@@ -34,6 +34,16 @@ const swiper2 = new Swiper('.swiper-deleted', {
   },
 });
 
+const swiper3 = new Swiper('.swiper-badtrip', {
+  slidesPerView: 3,
+  loop: true,
+  spaceBetween: 22,
+  speed: 500,
+  navigation: {
+    nextEl: '.swiper-button-next-badtrip',
+    prevEl: '.swiper-button-prev-badtrip',
+  },
+});
 
 const slides = document.querySelectorAll('.swiper-slide')
 for (slide of slides){
