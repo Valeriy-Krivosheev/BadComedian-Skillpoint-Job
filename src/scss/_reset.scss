@@ -1,6 +1,9 @@
 html {
     box-sizing: border-box;
 }
+body{
+      text-decoration-skip-ink: none;
+}
 
 *,
 *::after,
@@ -58,4 +61,25 @@ button{
     &:hover{
         opacity: 0.8;
     }
+    &:focus{
+      border: transparent;
+      outline: transparent;
+    }
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

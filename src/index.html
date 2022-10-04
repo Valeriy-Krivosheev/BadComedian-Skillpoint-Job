@@ -87,9 +87,9 @@
                     правда..</option>
                 </select>
               </label>
-              <label class="label__name" for="name">
+              <label class="label__name" for="name" >
                 Имя
-                <input class="form__name" type="text" id="name" required>
+                <input class="form__name" type="text" id="name" required minlength="2">
               </label>
               <label class="label__mail" for="mail">
                 E-mail
@@ -100,7 +100,7 @@
               <label class="label__sum" for="sum">
                 Сумма
                 <div class="sum_container">
-                  <input class="form__sum" type="text" id="sum">
+                  <input class="form__sum" type="number" id="sum" min="100">
                   <span> От 100руб.</span>
                 </div>
 
@@ -259,7 +259,7 @@
           <div class="badtrip__item">
             <a href="https://www.youtube.com/watch?v=n_WDyxt7Tio&list=PLRgDwAgxaXRLhSMC5hYitAtJUh8aqC_J7&index=1&t=4s"
               class="badtrip__link">
-              <img src="@img/badtrip-main.jpg" alt="Перейти на Badrtip">
+              <img src="@img/badtrip-main.png" alt="Перейти на Badrtip">
             </a>
             <h3 class="badtrip__name">
               Мэн (Где снимали Форрест Гамп и живёт Кинг)
@@ -286,7 +286,7 @@
               </a>
               <a href="https://www.youtube.com/watch?v=EfCINwy-KvI" class="swiper-slide" target="_blank">
                 <div class="support__image">
-                  <img src="@img/badtripslide1.png" alt="Перейти на обзор">
+                  <img src="@img/badtripslide2.png" alt="Перейти на обзор">
                 </div>
                 <h4 class="badtrip__name--slide">
                   Нью-Йорк/Гэмпшир (Где снимали Крёстный отец, Таксист, Кинг-конг, Джуманджи)
@@ -297,7 +297,7 @@
               </a>
               <a href="https://www.youtube.com/watch?v=e-mhqtOz4P4" class="swiper-slide" target="_blank">
                 <div class="support__image">
-                  <img src="@img/badtripslide1.png" alt="Перейти на обзор">
+                  <img src="@img/badtripslide3.png" alt="Перейти на обзор">
                 </div>
                 <h4 class="badtrip__name--slide">
                   Иллинойс (где снимали БРАТ 2, Один дома, День Сурка
@@ -427,6 +427,16 @@
         <a href="#" class="footer__link">info@skillpoint.ru</a>
         <a href="#" class="footer__link">Реквизиты для прямых переводов</a>
         <a href="#" class="footer__link">Политика обработки персональных данных</a>
+      </div>
+      <div class="footer__about">
+        <a href="#" class="footer__gooders">
+          <img src="@img/gooders.png" alt="Перейти на Gooders">
+          Платформа
+        </a>
+        <a href="#" class="footer__skilpoint">
+          <img src="@img/skilpoint.png" alt="Перейти на Skilpoint">
+          Дизайн/Разработка
+        </a>
       </div>
     </div>
 

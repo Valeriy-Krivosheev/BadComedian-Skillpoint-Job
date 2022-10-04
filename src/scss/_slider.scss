@@ -2,6 +2,8 @@
   position: relative;
   margin: 0 auto;
   margin-bottom: 25px;
+  max-height: 220px;
+  margin-bottom: 50px;
 }
 
 .swiper-button-next-support,
@@ -11,7 +13,8 @@
 .swiper-button-prev-badtrip,
 .swiper-button-next-badtrip{
   position: absolute;
-  top: 20%;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
 }
@@ -36,6 +39,7 @@
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
+  max-height: 250px;
 }
 .swiper-last {
   position: relative;
@@ -82,8 +86,11 @@
 .swiper-button-prev-last{
   left: 0;
 }
-.swiper-badtrip{
+.swiper-badtrip {
   padding: 20px;
+}
+.swiper-badtrip .swiper-wrapper .swiper-slide .support__image img{
+  border-radius: 20px;
 }
 .swiper-badtrip .swiper-wrapper .swiper-slide-active .support__image{
     position: relative;
