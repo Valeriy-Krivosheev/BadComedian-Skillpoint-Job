@@ -85,6 +85,7 @@ main {
 }
 .support__image {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .view-amount {
   color: #989898;
@@ -368,3 +369,4 @@ main {
     }
   }
 }
+@import 'media'
