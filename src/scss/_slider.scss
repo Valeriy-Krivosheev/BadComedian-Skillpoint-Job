@@ -105,3 +105,14 @@
   border-radius: 20px;
   }
 }
+#slider .selected::before{
+  position: absolute;
+  content: '';
+  height: 35px;
+  width: 35px;
+  background-image: url(../img/selected.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 20px;
+  left: 20px;
+}

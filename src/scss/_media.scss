@@ -25,6 +25,14 @@
   .support__box{
     margin-bottom: 20px;
   }
+  .footer__links{
+    flex-wrap: wrap;
+  }
+  .footer__link{
+    min-width: 45%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 768px) {
