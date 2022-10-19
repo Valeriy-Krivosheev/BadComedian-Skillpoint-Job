@@ -6,7 +6,39 @@
 
 <body>
   @@include('html/header.html')
-
+<div class="popup__bg">
+  <form class="popup">
+    <div class="popup-wrapper">
+      <h3>Проверить перевод</h3>
+      <p>
+        Если случилась какая-то беда и вы не получили письмо - вы можете запросить
+        его повторно, указав свой email, который вводили в платеже.
+      </p>
+      <div>
+      
+      </div>
+      <label class="label__mail">
+        E-mail
+        <input type="email">
+      
+      </label>
+      <div class="captcha">
+здесь будет капча
+      </div>
+      
+      <div class="label-btn">
+    <button type="submit" class="form__submit">Отправить</button>
+      </div>
+  
+      <span>
+        Нажимая кнопку «Отправить» Вы принимаете Условия предоставления
+        услуг, а так же даете согласие на обработку персональных данных
+        в соответствии с политикой конфиденциальности.
+      </span>
+    </div>
+   
+  </form>
+</div>
   <main>
     <section class="support">
       <div class="container">
@@ -16,13 +48,13 @@
           </h1>
           <div class="support_social">
             <a href="#" class="support__link">
-              <img src="@img/youtube-icon.png" alt="ссылка Youtube">
+              
             </a>
             <a href="#" class="support__link">
-              <img src="@img/telegram-icon.png" alt="ссылка Telegram">
+             
             </a>
             <a href="#" class="support__link">
-              <img src="@img/vk-icon.png" alt="ссылка Vk">
+            
             </a>
           </div>
         </div>
@@ -40,7 +72,7 @@
                   15 млн просмотров
                 </span>
               </div>
-              <div  class="swiper-slide" id="1">
+              <div class="swiper-slide" id="1">
                 <div class="support__image">
                   <img src="@img/slider-support2.png" alt="Перейти на обзор">
                 </div>
@@ -51,7 +83,7 @@
                   17 млн просмотров
                 </span>
               </div>
-              <div  class="swiper-slide" id="2">
+              <div class="swiper-slide" id="2">
                 <div class="support__image">
                   <img src="@img/slider-support3.png" alt="Перейти на обзор">
                 </div>
@@ -62,7 +94,7 @@
                   27 млн просмотров
                 </span>
               </div>
-              
+
             </div>
 
 
@@ -82,13 +114,13 @@
               <label class="label__select" for="select">
                 За обзор
                 <select class="form__select" name="" id="select">
-                  <option class="option" value="0" >ЗОЯ (Спасение рядового ИИСУСА)</option>
+                  <option class="option" value="0">ЗОЯ (Спасение рядового ИИСУСА)</option>
                   <option class="option" value="1">Непосредственно Каха (НОВЫЙ ШУРИК)</option>
                   <option class="option" value="2">Движение Вверх (Плагиат или великая
                     правда..</option>
                 </select>
               </label>
-              <label class="label__name" for="name" >
+              <label class="label__name" for="name">
                 Имя
                 <input class="form__name" type="text" id="name" required minlength="2">
               </label>
@@ -129,13 +161,13 @@
               Воспользуйтесь этой формой, что бы проверить статус платежа.
             </span>
           </div>
-          <button>Проверить статус</button>
+          <button class="open-popup">Проверить статус</button>
         </div>
 
       </div>
     </section>
 
-     <section class="last">
+    <section class="last">
       <div class="container">
         <div class="last__box">
           <h3 class="last__title title">Последние ролики</h3>
@@ -145,29 +177,44 @@
       <div class="swiper-last">
         <div class="swiper-wrapper slider-wrapper-last" id="last">
           <div class="swiper-slide">
-            <iframe class="iframe" src="https://www.youtube.com/embed/6U9HYTyTlVw" title="YouTube video player"
+            <!-- <iframe class="iframe" src="https://www.youtube.com/embed/6U9HYTyTlVw" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> -->
+            <a href="https://www.youtube.com/watch?v=6U9HYTyTlVw" target="_blank">
+              <img src="https://i.ytimg.com/vi/6U9HYTyTlVw/maxresdefault.jpg" alt="тест">
+            </a>
+
           </div>
           <div class="swiper-slide">
-            <iframe class="iframe" src="https://www.youtube.com/embed/NV_d0kmwNL8" title="YouTube video player"
+
+            <a href="https://www.youtube.com/watch?v=NV_d0kmwNL8" target="_blank">
+              <img src="https://i.ytimg.com/vi/NV_d0kmwNL8/maxresdefault.jpg" alt="">
+            </a>
+            <!-- <iframe class="iframe" src="https://www.youtube.com/embed/NV_d0kmwNL8" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> -->
           </div>
           <div class="swiper-slide">
-            <iframe class="iframe" src="https://www.youtube.com/embed/ujOVmKIrHqQ" title="YouTube video player"
+            <a href="https://www.youtube.com/watch?v=ujOVmKIrHqQ&t=1s" target="_blank">
+              <img src="https://i.ytimg.com/vi/ujOVmKIrHqQ/maxresdefault.jpg" alt="">
+            </a>
+            <!-- <iframe class="iframe" src="https://www.youtube.com/embed/ujOVmKIrHqQ" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              allowfullscreen></iframe> -->
           </div>
           <div class="swiper-slide">
-            <iframe class="iframe" src="https://www.youtube.com/embed/nIkH6C3_CX8" title="YouTube video player"
+            <a href="https://www.youtube.com/watch?v=nIkH6C3_CX8&t=1s" target="_blank">
+              <img src="https://i.ytimg.com/vi/nIkH6C3_CX8/maxresdefault.jpg" alt="">
+             
+            </a>
+            <!-- <iframe class="iframe" src="https://www.youtube.com/embed/nIkH6C3_CX8" title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
-            </iframe>
+            </iframe> -->
           </div>
 
         </div>
@@ -413,13 +460,10 @@
       <div class="footer__icons">
         <div class="footer__social">
           <a href="#" class="support__link">
-            <img src="@img/footer-youtube.png" alt="ссылка Youtube">
           </a>
           <a href="#" class="support__link">
-            <img src="@img/footer-telegram.png" alt="ссылка Telegram">
           </a>
           <a href="#" class="support__link">
-            <img src="@img/footer-vk.png" alt="ссылка Vk">
           </a>
         </div>
       </div>

@@ -11,7 +11,7 @@
 .swiper-button-next-deleted,
 .swiper-button-prev-deleted,
 .swiper-button-prev-badtrip,
-.swiper-button-next-badtrip{
+.swiper-button-next-badtrip {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -20,19 +20,17 @@
 }
 
 .swiper-button-prev-support,
-.swiper-button-prev-deleted {
+.swiper-button-prev-deleted,
+.swiper-button-prev-badtrip {
   left: -43px;
 }
-.swiper-button-prev-badtrip {
-  left: -20px;
-}
+
 .swiper-button-next-support,
-.swiper-button-next-deleted {
+.swiper-button-next-deleted,
+.swiper-button-next-badtrip {
   right: -48px;
 }
-.swiper-button-next-badtrip  {
-  right: -24px;
-}
+
 .swiper-support,
 .swiper-deleted,
 .swiper-badtrip {
@@ -46,7 +44,7 @@
   box-sizing: border-box;
   width: 100%;
 }
-.slider-wrapper-last .swiper-slide-active {
+.slider-wrapper-last .swiper-slide-active a {
   position: relative;
   &::after {
     position: absolute;
@@ -63,7 +61,7 @@
   padding: 0 0 30% 0 !important;
   height: 0 !important;
 }
-.swiper-slide iframe,
+// .swiper-slide iframe,
 .swiper-slide object,
 .swiper-slide embed {
   position: absolute;
@@ -79,21 +77,16 @@
   top: 50%;
   z-index: 10;
   transform: translateY(-50%);
+  height: 70px;
+  width: 70px;
 }
-.swiper-button-next-last{
-  right: 0;
-}
-.swiper-button-prev-last{
-  left: 0;
-}
-.swiper-badtrip {
-  padding: 20px;
-}
-.swiper-badtrip .swiper-wrapper .swiper-slide .support__image img{
+
+
+.swiper-badtrip .swiper-wrapper .swiper-slide .support__image img {
   border-radius: 20px;
 }
-.swiper-badtrip .swiper-wrapper .swiper-slide-active .support__image{
-    position: relative;
+.swiper-badtrip .swiper-wrapper .swiper-slide-active .support__image {
+  position: relative;
   &::after {
     position: absolute;
     content: "";
@@ -101,13 +94,13 @@
     right: 0;
     left: 0;
     bottom: 0;
-  box-shadow: 0px 0px 23px #276ca1;
-  border-radius: 20px;
+    box-shadow: 0px 0px 23px #276ca1;
+    border-radius: 20px;
   }
 }
-#slider .selected::before{
+#slider .selected::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 35px;
   width: 35px;
   background-image: url(../img/selected.png);

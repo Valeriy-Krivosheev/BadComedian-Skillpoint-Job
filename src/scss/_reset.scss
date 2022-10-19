@@ -58,6 +58,7 @@ a {
 }
 button{
     transition: opacity .3s;
+    color: inherit;
     &:hover{
         opacity: 0.8;
     }

@@ -1,11 +1,16 @@
 @media (max-width: 1110px) {
   .swiper-button-prev-support,
-  .swiper-button-prev-deleted {
+  .swiper-button-prev-deleted,
+  .swiper-button-prev-badtrip {
     left: -20px;
   }
   .swiper-button-next-support,
-  .swiper-button-next-deleted {
+  .swiper-button-next-deleted,
+  .swiper-button-next-badtrip {
     right: -23px;
+  }
+  .popup-wrapper {
+    max-width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -22,13 +27,13 @@
     text-align: center;
     align-items: center;
   }
-  .support__box{
+  .support__box {
     margin-bottom: 20px;
   }
-  .footer__links{
+  .footer__links {
     flex-wrap: wrap;
   }
-  .footer__link{
+  .footer__link {
     min-width: 45%;
     text-align: center;
     margin-bottom: 10px;
@@ -41,39 +46,44 @@
   .swiper-badtrip {
     height: 250px;
   }
+  .swiper-button-next-last,
+  .swiper-button-prev-last {
+    height: 50px;
+    width: 50px;
+  }
   .title {
     font-size: 35px;
   }
-  .form__inner{
+  .form__inner {
     flex-direction: column;
     align-items: center;
   }
-  .form__items{
+  .form__items {
     width: 70%;
   }
-  .form__item{
+  .form__item {
     flex-direction: column;
   }
-  .form__submit{
+  .form__submit {
     margin-bottom: 20px;
   }
-  .deleted__box{
+  .deleted__box {
     flex-direction: column;
   }
   .deleted__title {
     margin-bottom: 20px;
     text-align: center;
   }
-  .deleted__title span{
+  .deleted__title span {
     display: block;
   }
-  .deleted__about{
+  .deleted__about {
     text-align: center;
   }
-  .form__conditions{
+  .form__conditions {
     text-align: center;
   }
-  .badtrip__inner{
+  .badtrip__inner {
     padding: 10%;
     padding-bottom: 10%;
     text-align: center;
@@ -81,22 +91,28 @@
     background-size: contain;
     background-image: url(../img/badtripinner-mobile.png);
   }
-  .badtrip__item{
+  .badtrip__item {
     padding: 30px;
     max-width: 100%;
   }
-  .badtrip__item:first-child{
+  .badtrip__item:first-child {
     margin-bottom: 20px;
   }
-  .badtrip__link{
+  .badtrip__link {
     box-shadow: 0px 0px 120px #511e85;
   }
-  .popular__inner{
+  .popular__inner {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .label-btn button {
+    margin: 0;
+  }
+  .popup {
+    min-width: 80%;
   }
 }
 @media (max-width: 480px) {
-  .header{
+  .header {
     background-position: right 30% bottom 46%;
   }
   .swiper-button-next-support,
@@ -113,13 +129,13 @@
   .support_social {
     display: none;
   }
-  .form{
+  .form {
     padding: 20px 10px;
   }
-  .form__items{
+  .form__items {
     width: 90%;
   }
-  .support__check{
+  .support__check {
     padding: 15px;
   }
   .support__check {
@@ -128,78 +144,94 @@
   .title {
     font-size: 30px;
   }
-  .swiper-last{
+  .swiper-last {
     height: 100px;
   }
-  .slider-wrapper-last .swiper-slide{
+  .slider-wrapper-last .swiper-slide {
     height: 100% !important;
   }
   .last__title {
     font-size: 30px;
   }
-  .last{
+  .last {
     padding-bottom: 170px;
     padding-top: 30px;
   }
-  .support{
+  .support {
     padding: 30px 0;
   }
-  .last__box{
+  .last__box {
     flex-direction: column;
   }
   .swiper-button-prev-last,
-  .swiper-button-next-last{
+  .swiper-button-next-last {
     transform: translateY(0);
     top: 75%;
     height: 40px;
     width: 40px;
   }
-  .badtrip{
+  .badtrip {
     padding-top: 40px;
   }
-  .badtrip__inner{
+  .badtrip__inner {
     padding: 0;
     background-size: cover;
   }
-  .badtrip__item{
+  .badtrip__item {
     padding: 35px;
   }
-  .badtrip__subtitle{
+  .badtrip__subtitle {
     font-weight: 400;
-font-size: 20px;
+    font-size: 20px;
   }
-  .badtrip__item:first-child{
+  .badtrip__item:first-child {
     margin-bottom: 0;
   }
-  .badtrip__name{
+  .badtrip__name {
     font-weight: 400;
-padding: 0;
-text-align: left;
-font-size: 18px;
+    padding: 0;
+    text-align: left;
+    font-size: 18px;
   }
-  .deleted{
+  .deleted {
     padding: 30px 0;
   }
-  .popular{
+  .popular {
     padding: 20px 0;
   }
-  .popular__inner{
+  .popular__inner {
     gap: 20px 10px;
   }
-  .support__image{
+  .support__image {
     margin-bottom: 5px;
   }
-  .support__name{
+  .support__name {
     font-size: 14px;
   }
-  .support__box{
+  .support__box {
     line-height: 1;
   }
   .deleted__title {
     line-height: 1;
     margin-bottom: 10px;
   }
-  .deleted__box{
+  .deleted__box {
     margin-bottom: 10px;
+  }
+  .popup-wrapper h3 {
+    font-size: 22px;
+  }
+  .popup-wrapper p {
+    font-size: 12px;
+  }
+  .popup-wrapper span {
+    font-size: 12px;
+    max-width: 90%;
+  }
+  .popup-wrapper label {
+    max-width: 95%;
+  }
+  .popup-wrapper label input {
+    padding: 14px 10px;
   }
 }

@@ -3,7 +3,8 @@ const swiper = new Swiper('.swiper-support', {
   loop: true,
   spaceBetween: 15,
   speed: 500,
-  slideToClickedSlide: true,
+  slideToClickedSlide: false,
+
 
   navigation: {
     nextEl: '.swiper-button-next-support',
@@ -82,30 +83,26 @@ const select = document.getElementById("select")
 const slider = document.getElementById('slider')
 const selected = slider.querySelectorAll('.swiper-slide')
 
-for (let box of selected) {
-  box.addEventListener('click', function () {
-    if (this.classList.contains('selected')) {
-      this.classList.remove('selected');
+const selectHandler = function (e) {
+  const currentSlide = e.target.closest('.swiper-slide')
+  if (currentSlide.classList.contains('selected')) {
+    currentSlide.classList.remove('selected');
+  }
+  else {
+    for (let slide of selected) {
+      slide.classList.remove('selected');
+      currentSlide.classList.add('selected');
     }
-    else {
-      for (let slide of selected) {
-        slide.classList.remove('selected');
-        this.classList.add('selected');
-      }
-    }
-    let currentSlide = slider.querySelector('.selected')
-    let text = currentSlide.querySelector('.support__name').innerHTML.trim()
-    for (let option of select.options) {
-      option.removeAttribute("selected")
-    }
-    select.options[currentSlide.id].selected = 'selected'
-    let newText = select.options[currentSlide.id].textContent
-    newText = text
-  })
+  }
+  let text = currentSlide.querySelector('.support__name').textContent.trim();
+  for (let option of select.options) {
+    option.removeAttribute("selected")
+  }
+  select.options[currentSlide.id].selected = 'selected'
+  let newText = select.options[currentSlide.id].textContent
+  newText = text
 }
-
-
-select.addEventListener("change", function () {
+const chooseSlide = function () {
   let selectVal = this.value;
   swiper.slideToLoop(selectVal, 500, true)
   for (item of selected) {
@@ -114,11 +111,34 @@ select.addEventListener("change", function () {
       item.classList.add('selected')
     }
   }
+}
+
+select.addEventListener("change", chooseSlide);
+slider.addEventListener('click', selectHandler);
+
+
+const popupBg = document.querySelector('.popup__bg'); 
+const popup = document.querySelector('.popup');
+const openPopupButton = document.querySelector('.open-popup'); 
+
+openPopupButton.addEventListener('click', (e)=>{
+  e.preventDefault();
+  popupBg.classList.add('active'); 
+  popup.classList.add('active'); 
+})
+document.addEventListener('click', (e) => { 
+  if (e.target === popupBg) { 
+    popupBg.classList.remove('active'); 
+    popup.classList.remove('active');
+  }
 });
 
+// Выравнивание стрелок слайдера "Последние выпуски"
 
-
-
-
-
-
+const last = document.getElementById('last')
+let lastSlideWidth = last.querySelector('.swiper-slide').offsetWidth / 3.3
+let margin = (Math.round(lastSlideWidth) + 'px')
+const arrowNext = document.querySelector('.swiper-button-next-last')
+const arrowPrev = document.querySelector('.swiper-button-prev-last')
+arrowNext.style.right = margin
+arrowPrev.style.left = margin
